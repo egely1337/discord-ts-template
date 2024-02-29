@@ -1,0 +1,25 @@
+{
+  "name": "typescript-bot-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist/ && tsc --pretty",
+    "start": "npx prisma generate --schema src/prisma/schema.prisma && npm run build && node dist/index.js",
+    "dev": "tsc -w & nodemon dist/index.js"
+  },
+  "author": "egely1337",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.10.2",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "prisma": "^5.10.2"
+  }
+}
