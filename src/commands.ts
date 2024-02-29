@@ -2,8 +2,7 @@ import { CommandInteraction } from "discord.js";
 import { type CommandType } from "./types/command";
 
 // * commands
-import BalanceCommand from "./commands/balance";
-import RegisterCommand from "./commands/register";
+import HelloCommand from "./commands/hello"
 
 // * end
 
@@ -13,7 +12,7 @@ type RunCommandProps = {
 }
 
 export const Commands: CommandType[] = [
-    BalanceCommand, RegisterCommand
+    HelloCommand
 ];
 
 export const CommandsData = Object.values(Commands).map((val) => val.data.toJSON());
